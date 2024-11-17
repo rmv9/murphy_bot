@@ -1,4 +1,4 @@
-"""meteo_API for 10 days."""
+"""meteo_API for X days."""
 import openmeteo_requests
 
 import requests_cache
