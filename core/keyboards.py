@@ -20,10 +20,10 @@ start_menu_keyboard.row(
         text=msg.main_btns['PICS'],
         callback_data='pictures',
     ),
-    # types.InlineKeyboardButton(
-    #     text=msg.main_btns['WEATH'],
-    #     callback_data='weather',
-    # ),
+    types.InlineKeyboardButton(
+        text=msg.main_btns['WEATH'],
+        callback_data='weather',
+    ),
 ),
 start_menu_keyboard.row(
     types.InlineKeyboardButton(
