@@ -2,9 +2,9 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY requirements_meteo.txt .
+COPY requirements.txt .
 
-RUN pip install -r requirements_meteo.txt --no-cache-dir
+RUN pip install -r requirements.txt --no-cache-dir
 
 COPY . .
 

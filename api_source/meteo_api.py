@@ -1,10 +1,4 @@
 """meteo_API for X days."""
-import openmeteo_requests
-
-import requests_cache
-import pandas as pd
-from retry_requests import retry
-from datetime import datetime
 
 
 def get_wind_direct(degrees) -> str:
@@ -25,6 +19,13 @@ def get_wind_direct(degrees) -> str:
 
 def get_data(today=True) -> dict:
     """pass."""
+    import openmeteo_requests
+
+    import requests_cache
+    import pandas as pd
+    from retry_requests import retry
+    from datetime import datetime
+
     cache_session = requests_cache.CachedSession(
         '.cache',
         expire_after=3600
