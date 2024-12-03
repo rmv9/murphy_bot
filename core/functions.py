@@ -2,7 +2,6 @@
 import requests
 import datetime as dt
 
-from dotenv import load_dotenv
 from telebot import TeleBot
 
 import helpers.constants as cons
@@ -13,8 +12,6 @@ import core.keyboards as kb
 import helpers.messages as msg
 import api_source.meteo_api as mt
 import core.permissions as perm
-
-load_dotenv()
 
 bot_v1 = TeleBot(token=perm.TELEGRAM_BOT_TOKEN)
 

@@ -1,21 +1,10 @@
 """test mode."""
 import sys
-import os
-
-from dotenv import load_dotenv
 
 import core.functions as func
 import core.logging as log
 import core.permissions as perm
 import helpers.messages as msg
-
-load_dotenv()
-
-data_id = {
-    'darya': os.getenv('CHAT_ID_DARYA'),
-    'max': os.getenv('CHAT_ID_MAX'),
-    'alex': os.getenv('CHAT_ID_ALEX')
-}
 
 weather_list = ['today', 'tomorrow']
 pic_list = ['cat', 'dog']

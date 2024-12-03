@@ -1,9 +1,13 @@
 """Access and tokens."""
 import os
 
+import dotenv
 from dotenv import load_dotenv
 
-load_dotenv()
+dotenv_path = dotenv.find_dotenv()
+if not os.path.exists(dotenv_path):
+    exit('File .env not found!')
+load_dotenv(dotenv_path, override=True)
 
 TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 CHAT_ID_MAX = os.getenv('CHAT_ID_MAX')
