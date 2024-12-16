@@ -24,7 +24,7 @@ CHAT_ID=***
 Запустить контейнер проекта:
 
 ```
-docker compose up
+docker compose up -d
 ```
 
 ## Пример работы:
