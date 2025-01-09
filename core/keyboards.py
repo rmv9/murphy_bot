@@ -126,6 +126,7 @@ afisha_keyboard.row(
     ),
 )
 
+# REACTS
 
 # afisha react
 afisha_react_keyboard = types.InlineKeyboardMarkup()
@@ -185,6 +186,8 @@ picture_react_keyboard.row(
         callback_data='start',
     )
 )
+
+# SETS
 
 menu_set = {
     'init_cmd': init_cmd_keyboard,

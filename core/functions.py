@@ -2,7 +2,7 @@
 import requests
 import datetime as dt
 
-from telebot import TeleBot
+from telebot import TeleBot, types
 
 import helpers.constants as cons
 import helpers.endpoints as endp
@@ -59,6 +59,10 @@ class Initializator(BaseObject):
             text=msg.direct_messages['TEST'],
             reply_markup=kb.menu_set['init_cmd'],
         )
+
+
+class NativeMenu(BaseObject):
+    """Native menu class."""
 
 
 # TODO: rebuild with OOP
@@ -162,7 +166,6 @@ def weather_react(call):
     """pass."""
     chat = call.message.chat
     keyboard = kb.react_set['weather_react']
-    # today_precip = mt.meteo_data_td['precip_prob']
 
     weather_data = {
         'today': get_weather(mt.get_data()),
@@ -171,9 +174,6 @@ def weather_react(call):
             today=False
         ),
     }
-    # if ((today_precip <= ALLOW_PRECIP)
-    #         and call.data == 'today'):
-    #     report += f'\nКуда можно сходить сегодня:\n{mos_afisha}'
 
     bot_v1.send_message(
         chat.id,
@@ -184,7 +184,7 @@ def weather_react(call):
 
 # TODO: what about response[0].get('url')
 # now we have json collection as dict. whith key-'url'
-# maybe better use url with picture directly
+# maybe use url with picture directly
 def picture_react(call):
     """Get cat pic from external API."""
     chat = call.message.chat
@@ -227,7 +227,7 @@ def get_weather(data: dict, today=True) -> str:
         data['min_temp'], data['max_temp']
     )
     report = (
-        f'{min_temp} - {max_temp} '
+        f'{min_temp} / {max_temp} '
         f'{msg.min_max_temp}\n'
         f'{msg.weather['WIND']} {data['wind_direct']}, '
         f'{int(data['wind'])} {msg.weather['W_SPEED']}\n'
@@ -238,7 +238,7 @@ def get_weather(data: dict, today=True) -> str:
 
     report += (
         f'\nСечас:\n{int(data['cur_temp'])} °C\n'
-        f':updated: {data['time']}\n'
+        f':upd: {data['time']}\n'
         f'{msg.weather['WIND']} {data["wind_direct"]}, '
         f'{int(data['wind'])} {msg.weather['W_SPEED']}\n'
         f'{msg.weather['HUMID']} {int(data['humid'])} %\n'
