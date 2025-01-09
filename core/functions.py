@@ -2,7 +2,7 @@
 import requests
 import datetime as dt
 
-from telebot import TeleBot, types
+from telebot import TeleBot
 
 import helpers.constants as cons
 import helpers.endpoints as endp
