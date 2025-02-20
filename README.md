@@ -27,16 +27,7 @@ CHAT_ID=***
 docker compose up -d
 ```
 
-## Пример работы:
-Запуск  
-<img src="https://i.postimg.cc/jSGFGFnd/Screenshot-2024-09-01-12-48-37-823-org-telegram-messenger-edit.jpg" height="500">
-Меню  
-<img src="https://i.postimg.cc/rpxPcN5G/Screenshot-2024-09-01-12-54-08-088-org-telegram-messenger.jpg" height="500">  
-<img src="https://i.postimg.cc/4xK02gdS/Screenshot-2024-09-01-12-54-34-379-org-telegram-messenger.jpg" height="500">
-
-
-
 ## Автор проекта
 Максим Раздорожный  
 [Электронная почта](mailto:rmv_93@mail.ru)   
-[Telegram](https://t.me/rmv_dev)
+[Telegram](https://t.me/rmv_9)
